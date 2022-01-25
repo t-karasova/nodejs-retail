@@ -35,7 +35,7 @@ describe('Remove fulfillment', () => {
 
   before(async () => {
     stdout = execSync(
-      `node product/remove_fulfillment_places.js ${productId}`,
+      `node interactive-tutorials/product/remove_fulfillment_places.js ${productId}`,
       {cwd}
     );
   });

@@ -51,7 +51,10 @@ describe('Set inventory', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node product/set_inventory.js ${productId}`, {cwd});
+    stdout = execSync(
+      `node interactive-tutorials/product/set_inventory.js ${productId}`,
+      {cwd}
+    );
   });
 
   it('should check that product created', () => {

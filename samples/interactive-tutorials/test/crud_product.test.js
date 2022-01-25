@@ -46,7 +46,10 @@ describe('CRUD product', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node product/crud_product.js ${productId}`, {cwd});
+    stdout = execSync(
+      `node interactive-tutorials/product/crud_product.js ${productId}`,
+      {cwd}
+    );
   });
 
   it('should check that product CRUD operation started', () => {

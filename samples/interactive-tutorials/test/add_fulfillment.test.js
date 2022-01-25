@@ -34,9 +34,12 @@ describe('Add fulfillment', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node product/add_fulfillment_places.js ${productId}`, {
-      cwd,
-    });
+    stdout = execSync(
+      `node interactive-tutorials/product/add_fulfillment_places.js ${productId}`,
+      {
+        cwd,
+      }
+    );
   });
 
   it('should check that product created', () => {

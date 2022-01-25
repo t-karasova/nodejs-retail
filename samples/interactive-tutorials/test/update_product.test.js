@@ -47,7 +47,10 @@ describe('Update product', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node product/update_product.js ${productId}`, {cwd});
+    stdout = execSync(
+      `node interactive-tutorials/product/update_product.js ${productId}`,
+      {cwd}
+    );
   });
 
   it('should check that product created', () => {

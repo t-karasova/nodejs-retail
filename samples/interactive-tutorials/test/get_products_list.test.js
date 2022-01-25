@@ -27,7 +27,10 @@ describe('Get products list', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync('node product/get_products_list.js', {cwd});
+    stdout = execSync(
+      'node interactive-tutorials/product/get_products_list.js',
+      {cwd}
+    );
   });
 
   it('should check that get products list started', () => {

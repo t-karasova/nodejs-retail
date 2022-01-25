@@ -32,7 +32,10 @@ describe('Get product', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync(`node product/get_product.js ${productId}`, {cwd});
+    stdout = execSync(
+      `node interactive-tutorials/product/get_product.js ${productId}`,
+      {cwd}
+    );
   });
 
   it('should check that product created', () => {
