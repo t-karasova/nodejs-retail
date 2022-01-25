@@ -27,7 +27,10 @@ describe('Import product from gcs', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync('node product/import_products_gcs.js', {cwd});
+    stdout = execSync(
+      'node interactive-tutorials/product/import_products_gcs.js',
+      {cwd}
+    );
   });
 
   it('should check that import started', () => {

@@ -27,9 +27,12 @@ describe('Import product from big query table', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync('node product/import_products_big_query_table.js', {
-      cwd,
-    });
+    stdout = execSync(
+      'node interactive-tutorials/product/import_products_big_query_table.js',
+      {
+        cwd,
+      }
+    );
   });
 
   it('should check that import started', () => {

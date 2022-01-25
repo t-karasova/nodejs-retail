@@ -46,7 +46,7 @@ describe('Import product from inline source', () => {
 
   before(async () => {
     stdout = execSync(
-      `node product/import_products_inline_source.js ${product1.id} ${product2.id}`,
+      `node interactive-tutorials/product/import_products_inline_source.js ${product1.id} ${product2.id}`,
       {cwd}
     );
   });
