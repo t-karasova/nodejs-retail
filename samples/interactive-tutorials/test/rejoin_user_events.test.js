@@ -29,7 +29,10 @@ describe('Rejoin user events', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync('node events/rejoin_user_events.js', {cwd});
+    stdout = execSync(
+      'node interactive-tutorials/events/rejoin_user_events.js',
+      {cwd}
+    );
   });
 
   it('should check that new event already created', () => {

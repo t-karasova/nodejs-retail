@@ -29,7 +29,9 @@ describe('Write user event', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync('node events/write_user_event.js', {cwd});
+    stdout = execSync('node interactive-tutorials/events/write_user_event.js', {
+      cwd,
+    });
   });
 
   it('should check that write operation started', () => {
