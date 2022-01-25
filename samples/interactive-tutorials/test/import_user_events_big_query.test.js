@@ -27,9 +27,12 @@ describe('Import user events from big query table', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync('node events/import_user_events_big_query.js', {
-      cwd,
-    });
+    stdout = execSync(
+      'node interactive-tutorials/events/import_user_events_big_query.js',
+      {
+        cwd,
+      }
+    );
   });
 
   it('should check that import started', () => {

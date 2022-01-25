@@ -27,9 +27,12 @@ describe('Import user events from inline', () => {
   let stdout;
 
   before(async () => {
-    stdout = execSync('node events/import_user_events_inline.js', {
-      cwd,
-    });
+    stdout = execSync(
+      'node interactive-tutorials/events/import_user_events_inline.js',
+      {
+        cwd,
+      }
+    );
   });
 
   it('should check that import started', () => {
