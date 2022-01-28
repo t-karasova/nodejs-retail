@@ -55,7 +55,7 @@ const createProduct = async (
     priceInfo: {
       price: 30.0,
       originalPrice: 35.5,
-      currency_code: 'USD',
+      currencyCode: 'USD',
     },
     availability: 'IN_STOCK',
   };

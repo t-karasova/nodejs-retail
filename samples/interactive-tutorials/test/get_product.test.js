@@ -24,8 +24,7 @@ const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 const cwd = path.join(__dirname, '..');
 
 describe('Get product', () => {
-  const apiEndpoint = 'retail.googleapis.com';
-  const retailClient = new ProductServiceClient({apiEndpoint});
+  const retailClient = new ProductServiceClient();
   const productId = Math.random().toString(36).slice(2).toUpperCase();
   const projectNumber = process.env['PROJECT_NUMBER'];
   const name = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch/products/${productId}`;
