@@ -21,7 +21,6 @@ async function main() {
   const {UserEventServiceClient} = require('@google-cloud/retail').v2;
 
   const projectNumber = process.env['PROJECT_NUMBER'];
-  const apiEndpoint = 'retail.googleapis.com';
 
   // Placement
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog`;
@@ -49,7 +48,7 @@ async function main() {
   };
 
   // Instantiates a client.
-  const retailClient = new UserEventServiceClient({apiEndpoint});
+  const retailClient = new UserEventServiceClient();
 
   const IResponseParams = {
     IError: 0,

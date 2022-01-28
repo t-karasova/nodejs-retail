@@ -22,7 +22,6 @@ async function main() {
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const projectId = process.env['PROJECT_ID'];
-  const apiEndpoint = 'retail.googleapis.com';
 
   const datasetId = 'user_events';
   const dataSchema = 'user_event';
@@ -45,7 +44,7 @@ async function main() {
   };
 
   // Instantiates a client.
-  const retailClient = new UserEventServiceClient({apiEndpoint});
+  const retailClient = new UserEventServiceClient();
 
   const IResponseParams = {
     IError: 0,
