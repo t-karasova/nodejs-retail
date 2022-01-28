@@ -22,7 +22,6 @@ async function main(id1, id2) {
   const utils = require('../setup/setup_cleanup');
 
   const projectNumber = process.env['PROJECT_NUMBER'];
-  const apiEndpoint = 'retail.googleapis.com';
 
   // Placement
   const parent = `projects/${projectNumber}/locations/global/catalogs/default_catalog/branches/default_branch`;
@@ -91,7 +90,7 @@ async function main(id1, id2) {
   };
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient({apiEndpoint});
+  const retailClient = new ProductServiceClient();
 
   const callImportProducts = async () => {
     // Construct request

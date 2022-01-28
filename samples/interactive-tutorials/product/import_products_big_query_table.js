@@ -22,7 +22,6 @@ async function main() {
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const projectId = process.env['PROJECT_ID'];
-  const apiEndpoint = 'retail.googleapis.com';
 
   const datasetId = 'products';
   const tableId = 'products';
@@ -57,7 +56,7 @@ async function main() {
   const reconciliationMode = reconciliationModes.FULL;
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient({apiEndpoint});
+  const retailClient = new ProductServiceClient();
 
   const callImportProducts = async () => {
     // Construct request

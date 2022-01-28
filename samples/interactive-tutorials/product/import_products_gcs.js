@@ -22,7 +22,6 @@ async function main() {
 
   const projectNumber = process.env['PROJECT_NUMBER'];
   const bucketName = process.env['BUCKET_NAME'];
-  const apiEndpoint = 'retail.googleapis.com';
 
   const gcsBucket = `gs://${bucketName}`;
   const gcsErrorsBucket = `gs://${bucketName}/error`;
@@ -56,7 +55,7 @@ async function main() {
   };
 
   // Instantiates a client.
-  const retailClient = new ProductServiceClient({apiEndpoint});
+  const retailClient = new ProductServiceClient();
 
   const callImportProducts = async () => {
     // Construct request
